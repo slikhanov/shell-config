@@ -46,7 +46,6 @@ local function tab_bar_colors(color_scheme)
     inactive_titlebar_bg = bg:darken(0.2),
     tab_bar = {
       inactive_tab_edge = fg:darken(0.4),
-      -- The active tab is the one that has focus in the window
       active_tab = {
         bg_color = bg:lighten(0.1),
         fg_color = fg,
