@@ -21,7 +21,7 @@ end
 
 local function scheme_for_appearance(appearance)
   if appearance:find 'Dark' then
-    return 'nordfox'
+    return 'nightfox'
   else
     return 'dayfox'
   end
