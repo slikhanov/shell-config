@@ -1,0 +1,29 @@
+# Use space in front of command so it doesn't save to history.
+HISTCONTROL=ignorespace
+
+# Aliases
+goto() {
+  case $1 in
+    "v") cd ~/Desktop/dev/velocity ;;
+    "mc") cd ~/Desktop/dev/maxcloud ;;
+    "pc") cd ~/Desktop/dev/perforce/prism_cloud ;;
+    "do") cd ~/Desktop/dev/maxcloud/devops-scripts ;;
+    "ag") cd ~/Desktop/dev/maxcloud/jenkins-agent-ibmcloud/jenkins-agent-img/bin ;;
+    "nc") cd ~/.config/nvim ;;
+  esac
+}
+
+alias nv="neovide --multigrid"
+alias ikey="export IBM_API_KEY=`cat ~/.ibm_api_key | base64 -d`"
+alias ikeyp="export IBM_API_KEY_PROD=`cat ~/.ibm_api_key_prod | base64 -d`"
+alias nokey="unset IBM_API_KEY"
+alias nokey="unset IBM_API_KEY_PROD"
+alias icl='ibmcloud login --apikey $IBM_API_KEY'
+alias iclp='ibmcloud login --apikey $IBM_API_KEY_PROD'
+alias icsn="export IBM_API_KEY=`cat ~/.ibm_api_key | base64 -d` && export IBM_GH_TOKEN=`cat ~/.ibm_gh_token | base64 -d`"
+alias icsp="export IBM_API_KEY=`cat ~/.ibm_api_key_prod | base64 -d` && export IBM_GH_TOKEN=`cat ~/.ibm_gh_token | base64 -d`"
+
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
