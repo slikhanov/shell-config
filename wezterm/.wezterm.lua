@@ -1,5 +1,5 @@
 -- Pull in the wezterm API
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 
 -- This table will hold the configuration.
 local config = {}
@@ -16,22 +16,22 @@ local function get_appearance()
   if wezterm.gui then
     return wezterm.gui.get_appearance()
   end
-  return 'Dark'
+  return "Dark"
 end
 
 local function scheme_for_appearance(appearance)
-  if appearance:find 'Dark' then
-    return 'nightfox'
+  if appearance:find("Dark") then
+    return "nordfox"
   else
-    return 'dayfox'
+    return "dayfox"
   end
 end
 
 local function font_for_appearance(appearance)
-  if appearance:find 'Dark' then
-    return wezterm.font('JetBrainsMono Nerd Font', { weight = 'ExtraLight' })
+  if appearance:find("Dark") then
+    return wezterm.font("JetBrainsMono Nerd Font", { weight = "ExtraLight" })
   else
-    return wezterm.font('JetBrainsMono Nerd Font', { weight = 'Regular' })
+    return wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
   end
 end
 
@@ -52,21 +52,21 @@ local function tab_bar_colors(color_scheme)
       },
       inactive_tab = {
         bg_color = bg:darken(0.2),
-        fg_color = fg:darken(0.4)
+        fg_color = fg:darken(0.4),
       },
       inactive_tab_hover = {
         bg_color = bg:lighten(0.2),
-        fg_color = fg:darken(0.3)
+        fg_color = fg:darken(0.3),
       },
       new_tab = {
         bg_color = bg:darken(0.2),
-        fg_color = fg:darken(0.4)
+        fg_color = fg:darken(0.4),
       },
       new_tab_hover = {
         bg_color = bg:lighten(0.2),
-        fg_color = fg:darken(0.3)
+        fg_color = fg:darken(0.3),
       },
-    }
+    },
   }
 end
 
@@ -91,7 +91,7 @@ config.window_frame = {
   -- Whatever font is selected here, it will have the
   -- main font setting appended to it to pick up any
   -- fallback fonts you may have used there.
-  font = wezterm.font { family = 'Roboto' },
+  font = wezterm.font({ family = "Roboto" }),
 
   -- The size of the font in the tab bar.
   -- Default to 10.0 on Windows but 12.0 on other systems
@@ -107,7 +107,7 @@ config.window_frame = {
 }
 
 config.colors = {
-  tab_bar = tc.tab_bar
+  tab_bar = tc.tab_bar,
 }
 
 -- and finally, return the configuration to wezterm
