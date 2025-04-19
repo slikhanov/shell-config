@@ -23,7 +23,7 @@ local function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
 		return "nightfox"
 	else
-		return "nordfox"
+		return "Tokyo Night Day"
 	end
 end
 
@@ -31,7 +31,7 @@ local function font_for_appearance(appearance)
 	if appearance:find("Dark") then
 		return wezterm.font("JetBrainsMono Nerd Font", { weight = "ExtraLight" })
 	else
-		return wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" })
+		return wezterm.font("JetBrainsMono Nerd Font", { weight = "Medium" })
 	end
 end
 
@@ -77,7 +77,7 @@ config.color_scheme = scheme_for_appearance(appearance)
 
 -- This is where you actually apply your config choices
 config.font = font_for_appearance(appearance)
-config.font_size = 15.0
+config.font_size = 16.0
 
 -- TabBar options
 config.tab_bar_at_bottom = true

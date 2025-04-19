@@ -1,0 +1,9 @@
+theme = dark:nightfox,light:dawnfox
+shell-integration-features = no-cursor
+cursor-style = underline
+font-family = JetBrainsMono NFM Medium
+font-size = 15
+font-thicken = false
+font-thicken-strength = 0
+keybind = global:super+alt+t=toggle_quick_terminal
+copy-on-select = clipboard
