@@ -1,3 +1,4 @@
+auto-update-channel = tip
 theme = dark:nordfox,light:dawnfox
 shell-integration-features = no-cursor
 cursor-style = underline
@@ -11,3 +12,4 @@ font-thicken = false
 font-thicken-strength = 100
 keybind = global:super+alt+t=toggle_quick_terminal
 copy-on-select = clipboard
+keybind = shift+enter=text:\x1b\r
